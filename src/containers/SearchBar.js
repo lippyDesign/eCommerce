@@ -4,26 +4,49 @@ import { bindActionCreators } from 'redux';
 
 import { fetchProducts } from '../actions';
 
-const typeaheadOptions = ["bag", "wallet", "purse"]
+const typeaheadOptions = ["bag", "wallet", "green", "leather"]
 
 class SearchBar extends Component {
     constructor() {
         super();
-        this.state = { term: '' };
+        this.state = {
+            term: '',
+            searchOptionSelected: false
+        };
     }
 
     onInputChange(event) {
         this.setState({
-            term: event.target.value
+            term: event.target.value,
+            searchOptionSelected: false
         })
     }
 
     getTypeaheadOptions() {
-        if (this.refs.productSearchInput) {
-            const searchText = this.refs.productSearchInput.value.trim();
-            const availableOptions = typeaheadOptions.filter(current => current === searchText);
-            console.log(availableOptions)
+        // chooseItems function filters a list and returns items that contain searchText
+        const chooseItems = (searchText, list) => (
+            list.filter(item => item.toLowerCase().includes(searchText.toLowerCase()))
+        );
+        
+        // get the value of the input and assign in to searchText var
+        const searchInputText = this.state.term.trim();
+        // if searchtext is not empty
+        if (searchInputText) {
+            // use choose items function to locate the typeahead options
+            const searchOptions = chooseItems(searchInputText, typeaheadOptions);
+            // if typeahead option not selected render typeahead options to the screen
+            if (!this.state.typeaheadOptionSelected) {
+                return searchOptions.map(current => (
+                    <li onClick={() => this.typeaheadOptionSelected(current) } className="list-group-item" key={current}>{current}</li>)
+                );
+            }
         }
+    }
+    typeaheadOptionSelected(option) {
+        this.setState({
+            term: option,
+            searchOptionSelected: true
+        })
     }
 
     onFormSubmit(event) {
@@ -41,11 +64,10 @@ class SearchBar extends Component {
                     className="form-control"
                     value={this.state.term}
                     onChange={this.onInputChange.bind(this)}
-                    ref="productSearchInput"
                 />
-                <span className="typeaheadOptions">
+                <ul className="typeaheadOptions list-group">
                     {this.getTypeaheadOptions()}
-                </span>
+                </ul>
                 <span className="input-group-btn">
                     <button type="submit" className="btn btn-secondary">
                         Submit
