@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 
 import { fetchProducts } from '../actions';
 
+const typeaheadOptions = ["bag", "wallet", "purse"]
+
 class SearchBar extends Component {
     constructor() {
         super();
@@ -16,6 +18,14 @@ class SearchBar extends Component {
         })
     }
 
+    getTypeaheadOptions() {
+        if (this.refs.productSearchInput) {
+            const searchText = this.refs.productSearchInput.value.trim();
+            const availableOptions = typeaheadOptions.filter(current => current === searchText);
+            console.log(availableOptions)
+        }
+    }
+
     onFormSubmit(event) {
         event.preventDefault();
         // go and fetch product data
@@ -25,21 +35,23 @@ class SearchBar extends Component {
     }
 
     render() {
-        return (
-            <form className="input-group" onSubmit={this.onFormSubmit.bind(this)} >
+        return <form className="input-group" onSubmit={this.onFormSubmit.bind(this)} >
                 <input
-                    placeholder="Type in a Make, Model, SKU #, etc..."
+                    placeholder="Type in a Category, Make, Model, SKU #, etc..."
                     className="form-control"
                     value={this.state.term}
                     onChange={this.onInputChange.bind(this)}
+                    ref="productSearchInput"
                 />
+                <span className="typeaheadOptions">
+                    {this.getTypeaheadOptions()}
+                </span>
                 <span className="input-group-btn">
                     <button type="submit" className="btn btn-secondary">
                         Submit
                     </button>
                 </span>
-            </form>
-        );
+            </form>;
     }
 }
 
