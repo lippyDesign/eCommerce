@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-export var productCategory = '';
 
 // set up the root url using the provided API key
 const API_KEY = 'blahblahblah';
@@ -11,7 +10,6 @@ export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
 
 // fetch products function
 export function fetchProducts(category) {
-    productCategory = category;
     // the products should be accessible by combining root url and product category 
     const url = `${ROOT_URL}&q=${category},us`;
     // make request to the server using axios library

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 
-import SearchBar from '../containers/SearchBar';
-import ProductList from '../containers/ProductList';
+import HomePage from '../containers/HomePage';
 
 export default class App extends Component {
   render() {
-    return <div>
-      <SearchBar />
-      <ProductList />
-    </div>;
+    return <HomePage />;
   }
 }

@@ -6,7 +6,8 @@ export const dummyData = [
     "model": "Lmp Jade Tingtong Olive Sling Bag",
     "description": "A classy, urbane accessory for the debonair you is this fashionable olive coloured sling bag from Baggit. Its voguish design underscores its chic expression, while the PU (polyurethane) body makes it durable and easy to maintain.",
     "price": 199.99,
-    "categories": ["wallet", "women's wallet"],
+    "genders": ["women's"],
+    "categories": ["wallet"],
     "colors": ["green", "brown"],
     "materials": ["leather"]
   },
@@ -17,7 +18,8 @@ export const dummyData = [
     "model": "Black Leather Crossbody Bag",
     "description": "To stay ahead of the fashion pack, this black coloured sling bag from Phive Rivers is a must-have. This chic and stylish sling bag will surely jazz up your appearance. Capacious in structure, this leather sling bag will fit in all your knick-knacks.",
     "price": 99.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["black"],
     "materials": ["leather"]
   },
@@ -28,7 +30,8 @@ export const dummyData = [
     "model": "Black Leather Sling Bag",
     "description": "To stay ahead of the fashion pack, this black coloured sling bag from Phive Rivers is a must-have. This chic and stylish sling bag will surely jazz up your appearance. Capacious in structure, this leather sling bag will fit in all your knick-knacks.",
     "price": 89.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["black", "orange"],
     "materials": ["leather"]
   },
@@ -39,7 +42,8 @@ export const dummyData = [
     "model": "Bronze Pu Sling Bag",
     "description": "Be it your intense winter look or a cheerful summer appearance, this handbag from Lino Perros will certainly do justice to both. Carry it on your wrist and look like a diva wherever you go. ",
     "price": 289.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["purple"],
     "materials": ["faux leather"]
   },
@@ -50,7 +54,8 @@ export const dummyData = [
     "model": "Grey Faux Leather Handbag",
     "description": "A classy, urbane accessory for the debonair you is this fashionable olive coloured sling bag from Baggit. Its voguish design underscores its chic expression, while the PU (polyurethane) body makes it durable and easy to maintain.",
     "price": 199.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["black", "red"],
     "materials": ["leather"]
   },
@@ -61,7 +66,8 @@ export const dummyData = [
     "model": "Dark Mauve Handbag",
     "description": "Make the rest stop and stare at you as you make your way to work, carrying this dark mauve coloured handbag from Ladida.",
     "price": 179.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["purple"],
     "materials": ["leather"]
   },
@@ -72,7 +78,8 @@ export const dummyData = [
     "model": "Taino Dark Green Large Tote Bag",
     "description": "The cute and adorable bunny front flap design highlights the beauty of this aqua blue coloured backpack from Scoop Street. Decked with contrast polka dots all over and a glossy finish, this backpack is what you surely can?",
     "price": 169.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["green"],
     "materials": ["leather"]
   },
@@ -83,7 +90,8 @@ export const dummyData = [
     "model": "Lx Prone Cluster Olive Shoulder Bag",
     "description": "Look like the new style diva in town as you step out carrying this grey handbag from Baggit. Made from PU (polyurethane), this handbag features intricate white lace pattern all over and has a contrast coloured twin grab handles.",
     "price": 199.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["green"],
     "materials": ["polyester"]
   },
@@ -94,7 +102,8 @@ export const dummyData = [
     "model": "Olive Green Handbag",
     "description": "Get a stylish and urban look by carrying this olive coloured handbag for women from Peperone. Made from synthetic leather, this handbag has twin grab handles.",
     "price": 119.99,
-    "categories": ["bag", "women's bag", "women's purse"],
+    "genders": ["women's"],
+    "categories": ["bag", "purse"],
     "colors": ["black", "brown"],
     "materials": ["leather"]
   }
